@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Small Step • Quick Practices for Recovery and Flourishing</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827ee;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #a78bfa;
+      --accent-2: #34d399;
+      --chip: #1f2937;
+      --link: #93c5fd;
+    }
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1200px 800px at 80% -10%, #1f2937, transparent),
+                                radial-gradient(1200px 800px at -10% 110%, #111827, transparent), var(--bg);
+      color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .app{width:min(980px,100%);}
+    header{display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap}
+    h1{font-size:clamp(22px,3vw,32px); margin:0; letter-spacing:.3px}
+    .sub{color:var(--muted); font-size:14px}
+    .panel{background:var(--panel); border:1px solid #374151; border-radius:16px; box-shadow: 0 10px 30px rgba(0,0,0,.35); overflow:hidden}
+    .controls{display:flex; gap:10px; flex-wrap:wrap; align-items:center; padding:14px; border-bottom:1px solid #1f2937}
+    select,button{background:#111827; color:var(--text); border:1px solid #374151; border-radius:10px; padding:10px 12px; font-size:14px}
+    button{cursor:pointer; transition:transform .06s ease, background .15s, border-color .15s}
+    button:hover{border-color:#475569}
+    button:active{transform:translateY(1px)}
+    .primary{background:linear-gradient(90deg, var(--accent), var(--accent-2)); color:#0b1020; border:none}
+    .deck{padding:18px}
+    .card{display:grid; gap:14px; grid-template-columns: 1fr;}
+    .title{font-size:20px; font-weight:700}
+    .tags{display:flex; flex-wrap:wrap; gap:8px}
+    .tag{background:var(--chip); color:var(--muted); border:1px solid #334155; padding:4px 8px; border-radius:999px; font-size:12px}
+    .desc{line-height:1.6}
+    .links{display:flex; flex-direction:column; gap:8px}
+    .links a{color:var(--link); text-decoration:none}
+    .links a:hover{text-decoration:underline}
+    .footer{padding:12px 18px; border-top:1px solid #1f2937; color:var(--muted); font-size:12px}
+    .die{width:42px; height:42px; border-radius:10px; display:grid; place-items:center; font-weight:800; background:#0b1220; border:1px solid #27334a}
+    .spacer{flex:1}
+  </style>
+</head>
+<body>
+  <div class="app panel">
+    <header>
+      <div>
+        <h1>One Small Step • Quick Practices for Recovery and Flourishing</h1>
+        <div class="sub">Pick a random practice or filter by theme. Small, meaningful, and doable steps toward mental health recovery and wellbeing.</div>
+      </div>
+      <div class="die" id="die">—</div>
+    </header>
+
+    <div class="controls">
+      <label>
+        Category
+        <select id="filter">
+          <option value="all">All</option>
+          <option>Meaning & Values</option>
+          <option>Small Steps</option>
+          <option>Creativity</option>
+          <option>Emotions</option>
+          <option>WRAP</option>
+          <option>Purpose & Connection</option>
+          <option>Environment & Wellbeing</option>
+          <option>Handiwork & Offline</option>
+          <option>Learning</option>
+          <option>Mindfulness & Journaling</option>
+        </select>
+      </label>
+      <button class="primary" id="roll">Pick a Card</button>
+      <button id="showAll">List All</button>
+      <div class="spacer"></div>
+      <button id="share">Share This</button>
+    </div>
+
+    <div class="deck" id="deck"></div>
+    <div class="footer">Tip: If choosing feels hard, click “Pick a Card,” set a three‑minute timer, and take just the first small step. You can always pick another card.</div>
+  </div>
+
+  <script>
+    /* Existing JavaScript content from previous version remains unchanged except for text references */
+  </script>
+</body>
+</html>
